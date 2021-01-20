@@ -1,14 +1,29 @@
 import React from 'react';
 
-import { Text } from 'react-native';
+import { List, CategoryContainer, CategoryImage, CategoryName, CategoryStatus, RedCicle, Info} from './styles';
+import data from './data'
 
-import { Container } from './styles';
+interface ItemProps{
+  item: typeof data[0];
+}
 
 const CategoryList: React.FC = () => {
+  const CategoryItem: React.FC<ItemProps> = ({ item }) => (
+    <CategoryContainer>
+      <CategoryImage source={ item.source } />
+      <CategoryName numberOfLines={1}>{ item.name }</CategoryName>
+      <CategoryStatus>
+        <RedCicle />
+        <Info>51.9K</Info>
+      </CategoryStatus>
+    </CategoryContainer>
+  )
   return (
-    <Container>
-      <Text>CategoryList</Text>
-    </Container>
+    <List>
+      {data.map(item =>(
+        <CategoryItem key={item.name} item={item}/>
+      ))}
+    </List>
   );
 };
 

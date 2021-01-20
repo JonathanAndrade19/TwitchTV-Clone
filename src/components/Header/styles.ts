@@ -11,10 +11,10 @@ export const Container = styled.View`
 
 
 export const Avatar = styled.TouchableOpacity`
-    background: ${colors.tag};
     width: 32px;
     height 32px;
     border-radius: 16px;
+    background: ${colors.tag};
 `;
 
 export const OnlineStatus = styled.View`
