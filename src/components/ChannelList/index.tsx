@@ -1,14 +1,34 @@
 import React from 'react';
 
-import { Text } from 'react-native';
-
-import { Container } from './styles';
+import { List, ChannelContainer, LeftSide, Avatar, Column, Username, Info, RightSide, WhiteCilce } from './styles';
 
 const ChannelList: React.FC = () => {
+  const ChannelItem = () =>(
+    <ChannelContainer>
+      <LeftSide>
+        <Avatar/>
+        <Column>
+          <Username>Lídia Araújo</Username>
+          <Info>36 news Videos</Info>
+        </Column>
+      </LeftSide>
+      <RightSide>
+        <WhiteCilce/>
+      </RightSide>
+    </ChannelContainer>
+  ) 
   return (
-    <Container>
-      <Text>ChannelList</Text>
-    </Container>
+    <List>
+      <ChannelItem />
+      <ChannelItem />
+      <ChannelItem />
+      <ChannelItem />
+      <ChannelItem />
+      <ChannelItem />
+      <ChannelItem />
+      <ChannelItem />
+      <ChannelItem />
+    </List>
   );
 };
 
