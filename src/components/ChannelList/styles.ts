@@ -9,15 +9,20 @@ export const ChannelContainer = styled.TouchableOpacity`
     align-items: center;
     justify-content: space-between;
     padding-right: 14px;
+    margin-bottom: 25px;
 `;
 export const LeftSide = styled.View`
-
+    flex-direction: row;
+    align-items: center;
 `;
 export const Avatar = styled.View`
-
+    background: ${colors.tag};
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
 `;
 export const Column = styled.View`
-
+    padding-left: 10px;
 `;
 export const Username = styled.Text`
     color :${colors.black};
@@ -34,5 +39,9 @@ export const RightSide = styled.View`
 
 `;
 export const WhiteCilce = styled.View`
-
+    background: ${colors.black};
+    width: 9px;
+    height: 9px;
+    border-radius: 4.5px;
+    opacity: 0.85;
 `;
